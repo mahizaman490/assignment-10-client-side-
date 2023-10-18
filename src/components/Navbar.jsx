@@ -18,7 +18,8 @@ const Navbar = () => {
        {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+   <img className="w-10" src="/src/images/logo.png" alt="" />
+    <a className="btn btn-ghost normal-case text-orange-600 text-xl">Electronics</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
