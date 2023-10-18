@@ -1,7 +1,11 @@
+import Banner from "./Banner";
+import HomeBrandSec from "./brands/HomeBrandSec";
+
 const Home = () => {
     return (
         <div>
-            eta holo home page 
+           <Banner></Banner>
+           <HomeBrandSec></HomeBrandSec>
         </div>
     );
 };
