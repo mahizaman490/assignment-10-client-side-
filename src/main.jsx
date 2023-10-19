@@ -16,6 +16,11 @@ import MyCart from './components/MyCart';
 import Product from './components/Product';
 import Errorpage from './errorPagr/Errorpage';
 import Register from './components/Register';
+import AuthProvider from './providers/AuthProvider';
+import PrivateRoutes from './routes/PrivateRoutes';
+import UpdateProduct from './components/UpdateProduct';
+import SingleProductDetails from './components/SingleProductDetails';
+import SingleBrandPage from './components/SingleBrandPage';
 
 const router = createBrowserRouter([
   {
@@ -39,16 +44,30 @@ const router = createBrowserRouter([
       },
       {
         path:'/addproduct',
-        element:<AddProduct></AddProduct>
+        element:<PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
+      },
+      {
+        path:'/updateproduct',
+        element:<PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>
       },
       {
         path:'/mycart',
-        element: <MyCart></MyCart>
+        element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
       },
     
       {
-        path:'/products/:id',
+        path:'/product',
         element:<Product></Product>,
+        // loader:()=>fetch('/data.json')
+      },
+      {
+        path:'/singleBrandPage',
+        element:<SingleBrandPage></SingleBrandPage>
+        // loader:()=>fetch('/data.json')
+      },
+      {
+        path:'/singleProductDetails',
+        element:<PrivateRoutes><SingleProductDetails></SingleProductDetails>,</PrivateRoutes>
         // loader:()=>fetch('/data.json')
       }
     ]
@@ -57,6 +76,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
-  </React.StrictMode>,
+  <AuthProvider>
+  <RouterProvider router={router} />
+  </AuthProvider>
+ </React.StrictMode>,
 )
