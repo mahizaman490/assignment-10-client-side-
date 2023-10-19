@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
@@ -8,6 +8,7 @@ const Register = () => {
   const { createUser } = useContext(AuthContext)
   const [registerError, SetRegisterError] = useState('');
   const [registerSuccess, setregisterSuccess] = useState('');
+  const navigate = useNavigate()
   const handleRegister = e => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -32,6 +33,8 @@ const Register = () => {
         console.log(result.user)
 
         e.target.reset()
+        navigate('/')
+        
 
       })
       .catch(error => {
@@ -44,12 +47,14 @@ const Register = () => {
 
 
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
+
+  <>
+  
+  <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col ">
+          <div className="">
             <h1 className="text-5xl font-bold text-orange-500">Register now!</h1>
-            <p className="py-6 text-orange-400 font-semibold">Connect with our community and our support team to get real-time assistance, tips, and advice from fellow tech enthusiasts.</p>
+            <p className="py-6 font-semibold">Connect with our community and our support team to get real-time assistance, tips, and advice from fellow tech enthusiasts.</p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleRegister} className="card-body">
@@ -80,15 +85,19 @@ const Register = () => {
             </form>
             <p className="pb-3 pl-3"><span className="text-red-500 ">Alredy have account? </span> <Link to='/login ' className="text-red-500 underline">Login</Link></p>
           </div>
-        </div>
-        {
+          {
           registerError && <p className="text-red-700">{registerError}</p>
         }
         {
           registerSuccess && <p>{registerSuccess}</p>
         }
+        </div>
+    
+  
       </div>
-    </div>
+        
+  </>
+
   );
 };
 
