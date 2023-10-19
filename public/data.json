@@ -1,0 +1,231 @@
+{
+    "Apple": [
+      {
+        "image": "apple_iphone12.jpg",
+        "name": "iPhone 12",
+        "brand": "Apple",
+        "type": "Smartphone",
+        "price": 799.99,
+        "rating": 4.8,
+        "description": "The iPhone 12 is a powerful smartphone with a Super Retina XDR display and A14 Bionic chip."
+      },
+      {
+        "image": "apple_macbookair.jpg",
+        "name": "MacBook Air",
+        "brand": "Apple",
+        "type": "Laptop",
+        "price": 999.99,
+        "rating": 4.9,
+        "description": "The MacBook Air is a lightweight laptop with the M1 chip for exceptional performance."
+      },
+      {
+        "image": "apple_ipadpro.jpg",
+        "name": "iPad Pro",
+        "brand": "Apple",
+        "type": "Tablet",
+        "price": 799.99,
+        "rating": 4.7,
+        "description": "The iPad Pro is a versatile tablet for creative work and entertainment."
+      },
+      {
+        "image": "apple_airpodspro.jpg",
+        "name": "AirPods Pro",
+        "brand": "Apple",
+        "type": "Wireless Earbuds",
+        "price": 249.99,
+        "rating": 4.6,
+        "description": "AirPods Pro with active noise cancellation for immersive audio."
+      }
+    ],
+    "Samsung": [
+      {
+        "image": "samsung_galaxys21.jpg",
+        "name": "Galaxy S21",
+        "brand": "Samsung",
+        "type": "Smartphone",
+        "price": 699.99,
+        "rating": 4.7,
+        "description": "The Galaxy S21 features a stunning display, powerful Exynos processor, and versatile camera system."
+      },
+      {
+        "image": "samsung_qledtv.jpg",
+        "name": "QLED TV",
+        "brand": "Samsung",
+        "type": "TV",
+        "price": 1299.99,
+        "rating": 4.6,
+        "description": "Samsung's QLED TV offers vibrant colors and immersive viewing experiences."
+      },
+      {
+        "image": "samsung_galaxytab.jpg",
+        "name": "Galaxy Tab S7",
+        "brand": "Samsung",
+        "type": "Tablet",
+        "price": 549.99,
+        "rating": 4.8,
+        "description": "Samsung's Galaxy Tab S7 is a versatile tablet for productivity and entertainment."
+      },
+      {
+        "image": "samsung_galaxybuds.jpg",
+        "name": "Galaxy Buds Pro",
+        "brand": "Samsung",
+        "type": "Wireless Earbuds",
+        "price": 199.99,
+        "rating": 4.5,
+        "description": "Samsung's Galaxy Buds Pro with excellent sound quality and ANC."
+      }
+    ],
+    "Sony": [
+      {
+        "image": "sony_xperia1iii.jpg",
+        "name": "Xperia 1 III",
+        "brand": "Sony",
+        "type": "Smartphone",
+        "price": 999.99,
+        "rating": 4.8,
+        "description": "The Xperia 1 III boasts a 4K display and advanced camera technology."
+      },
+      {
+        "image": "sony_braviatv.jpg",
+        "name": "Bravia OLED TV",
+        "brand": "Sony",
+        "type": "TV",
+        "price": 1799.99,
+        "rating": 4.9,
+        "description": "Sony's Bravia OLED TV delivers incredible picture quality and immersive experiences."
+      },
+      {
+        "image": "sony_wh1000xm4.jpg",
+        "name": "WH-1000XM4",
+        "brand": "Sony",
+        "type": "Headphones",
+        "price": 349.99,
+        "rating": 4.9,
+        "description": "Sony's WH-1000XM4 headphones offer industry-leading noise cancellation and high-quality sound."
+      },
+      {
+        "image": "playstation5.jpg",
+        "name": "PlayStation 5",
+        "brand": "Sony",
+        "type": "Gaming Console",
+        "price": 499.99,
+        "rating": 4.8,
+        "description": "The PlayStation 5 is a next-gen gaming console for immersive gameplay."
+      }
+    ],
+    "Google": [
+      {
+        "image": "google_pixel6.jpg",
+        "name": "Pixel 6",
+        "brand": "Google",
+        "type": "Smartphone",
+        "price": 799.99,
+        "rating": 4.7,
+        "description": "The Pixel 6 features Google's powerful camera technology and smooth performance."
+      },
+      {
+        "image": "google_pixelbook.jpg",
+        "name": "Pixelbook",
+        "brand": "Google",
+        "type": "Laptop",
+        "price": 899.99,
+        "rating": 4.6,
+        "description": "Google's Pixelbook offers a premium Chromebook experience with a high-resolution touchscreen."
+      },
+      {
+        "image": "google_nesthub.jpg",
+        "name": "Nest Hub",
+        "brand": "Google",
+        "type": "Smart Display",
+        "price": 129.99,
+        "rating": 4.7,
+        "description": "Google's Nest Hub is a smart display for controlling your smart home."
+      },
+      {
+        "image": "google_pixelbuds.jpg",
+        "name": "Pixel Buds",
+        "brand": "Google",
+        "type": "Wireless Earbuds",
+        "price": 179.99,
+        "rating": 4.5,
+        "description": "Pixel Buds offer wireless convenience and Google Assistant integration."
+      }
+    ],
+    "Intel": [
+      {
+        "image": "intel_corei7.jpg",
+        "name": "Core i7-11700K",
+        "brand": "Intel",
+        "type": "Processor",
+        "price": 349.99,
+        "rating": 4.8,
+        "description": "The Intel Core i7-11700K is a high-performance processor for gaming and content creation."
+      },
+      {
+        "image": "intel_nuc.jpg",
+        "name": "NUC Mini PC",
+        "brand": "Intel",
+        "type": "Mini PC",
+        "price": 499.99,
+        "rating": 4.7,
+        "description": "Intel's NUC Mini PC offers compact power for various computing tasks."
+      },
+      {
+        "image": "intel_optanesdd.jpg",
+        "name": "Optane SSD 905P",
+        "brand": "Intel",
+        "type": "Solid State Drive",
+        "price": 299.99,
+        "rating": 4.6,
+        "description": "The Intel Optane SSD 905P provides ultra-fast storage performance for your PC."
+      },
+      {
+        "image": "intel_nuc_element.jpg",
+        "name": "NUC Element",
+        "brand": "Intel",
+        "type": "Compute Element",
+        "price": 299.99,
+        "rating": 4.6,
+        "description": "Intel's NUC Element is a modular compute element for versatile applications."
+      }
+    ],
+    "realme": [
+      {
+        "image": "realme_8pro.jpg",
+        "name": "Realme 8 Pro",
+        "brand": "realme",
+        "type": "Smartphone",
+        "price": 249.99,
+        "rating": 4.5,
+        "description": "The Realme 8 Pro is a budget-friendly smartphone with a high-resolution camera."
+      },
+      {
+        "image": "realme_budsair.jpg",
+        "name": "Realme Buds Air",
+        "brand": "realme",
+        "type": "Wireless Earbuds",
+        "price": 79.99,
+        "rating": 4.6,
+        "description": "Realme Buds Air offer wireless convenience and clear audio."
+      },
+      {
+        "image": "realme_smartwatch.jpg",
+        "name": "Realme Smartwatch",
+        "brand": "realme",
+        "type": "Smartwatch",
+        "price": 59.99,
+        "rating": 4.4,
+        "description": "Realme Smartwatch for fitness tracking and notifications."
+      },
+      {
+        "image": "realme_c11.jpg",
+        "name": "Realme C11",
+        "brand": "realme",
+        "type": "Smartphone",
+        "price": 119.99,
+        "rating": 4.2,
+        "description": "Realme C11 is a basic smartphone with long battery life."
+      }
+    ]
+  }
+  
