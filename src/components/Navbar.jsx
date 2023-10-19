@@ -50,10 +50,10 @@ const Navbar = () => {
             <span> <small>{user.displayName
             }</small></span>
 
-            <a onClick={handleLogOut} className="btn btn-sm">Logout</a>
+            <a onClick={handleLogOut} className="btn btn-sm bg-orange-400">Logout</a>
           </>
             : <Link to='/login'>
-              <button className="btn btn-sm">Login</button>
+              <button className="btn btn-sm hidden">Login</button>
             </Link>
         }
       </div>
