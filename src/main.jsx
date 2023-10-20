@@ -61,9 +61,9 @@ const router = createBrowserRouter([
         // loader:()=>fetch('/data.json')
       },
       {
-        path:'/singleBrandPage',
-        element:<SingleBrandPage></SingleBrandPage>
-        // loader:()=>fetch('/data.json')
+        path:'/:brand',
+        element:<SingleBrandPage></SingleBrandPage>,
+        loader:({params})=>fetch(`http://localhost:5000/product/${params.brand}`) 
       },
       {
         path:'/singleProductDetails',
