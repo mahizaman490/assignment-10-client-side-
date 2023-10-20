@@ -1,17 +1,24 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const SingleCardH = ({brand}) => {
   const {brand_image,brandN} = brand || {}
   return (
-    <div>
-     <div className="card w-96 bg-base-100 shadow-xl">
+    <Link to=''>
+    
+      <div >
+     <div className="card h-64 bg-orange-400 shadow-xl">
   <div className="card-body">
     <h2 className="card-title">{brandN}</h2>
    
   </div>
-  <figure><img src={brand_image} /></figure>
+  <figure><img className="w-full" src={brand_image} /></figure>
 </div>
     </div>
+    
+    </Link>
+  
   );
 };
 
