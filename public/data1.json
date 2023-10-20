@@ -1,0 +1,33 @@
+[
+    {
+      "brand_image": "https://ibb.co/3B4R0Zk",
+      "brandN": "Apple",
+      "id": 1
+    },
+    {
+      "brand_image": "https://ibb.co/XY8ny2X",
+      "brandN": "Samsung",
+      "id": 2
+    },
+    {
+      "brand_image": "https://ibb.co/1KbHTQy",
+      "brandN": "Sony",
+      "id": 3
+    },
+    {
+      "brand_image": "https://ibb.co/d20FV8B",
+      "brandN": "Google",
+      "id": 4
+    },
+    {
+      "brand_image": "https://ibb.co/d7mnvmR",
+      "brandN": "Intel",
+      "id": 5
+    },
+    {
+      "brand_image": "https://ibb.co/47PNQrm",
+      "brandN": "realme",
+      "id": 6
+    }
+  ]
+  
