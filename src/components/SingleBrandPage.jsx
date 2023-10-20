@@ -1,3 +1,5 @@
+import Product from "./Product";
+
 
 const SingleBrandPage = () => {
     return (
@@ -36,18 +38,12 @@ const SingleBrandPage = () => {
                 </div>
             </div>
 
-            <div className="w-10/12 mx-auto mt-14 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2" >
+            <div className="w-10/12 mx-auto mt-14" >
                 <h1 className="text-3xl text-orange-500 font-semibold text-center pb-8 md:text-6xl">Products for this Brands</h1>
-                <div className="card w-96 glass">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Life hack</h2>
-                        <p>How to park your car at your garage?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Learn now!</button>
-                        </div>
-                    </div>
+                <div className=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <Product></Product>
                 </div>
+                
             </div>
         </div>
     );

@@ -9,7 +9,14 @@ const SingleProductDetails = () => {
     <p>Description</p>
     <p>Brand Name</p>
     <p>Price</p>
-    <p>Ratings/star</p>
+    <p>Type</p>
+    <p><div className="rating">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+</div></p>
 
     <div className="card-actions justify-end">
       <button className="btn bg-orange-500 text-white">Add To Cart</button>

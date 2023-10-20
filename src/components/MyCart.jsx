@@ -1,8 +1,8 @@
 
 const MyCart = () => {
     return (
-        <div>
-            my items 
+        <div className="grid grid-cols-1 md:grid-cols-2">
+           
         </div>
     );
 };
