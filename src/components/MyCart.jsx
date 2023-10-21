@@ -59,7 +59,8 @@ console.log(MyCartData)
     
     return (
         <>
-        <div className="grid grid-cols-1 md:grid-cols-2 mb-[1000px]">
+        <div className="w-10/12 mx-auto md:py-20 py-8">
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-[300px] md:mb-[600px] lg:mb-[1000px]">
 
                 {
                    MyCartData.map(cart => <div key={cart._id} className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
@@ -113,6 +114,8 @@ console.log(MyCartData)
                 }
      
         </div>
+        </div>
+       
         </>
     );
     
