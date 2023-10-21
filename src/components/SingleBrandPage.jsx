@@ -6,6 +6,7 @@ import Product from "./Product";
 const SingleBrandPage = () => {
     const products = useLoaderData()
     console.log(products)
+    console.log(products.length)
     return (
         <div>
             <div className="w-10/12 mx-auto md:py-20 py-8">
@@ -45,11 +46,17 @@ const SingleBrandPage = () => {
             <div className="w-10/12 mx-auto mt-14" >
                 <h1 className="text-3xl text-orange-500 font-semibold text-center pb-8 md:text-6xl">Products for this Brands</h1>
                 <div className=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-2">
-                    {
-                       products?.map(product => <Product key={products._id} product={product}></Product>)
+
+                    {products.length?
+                       products?.map(product => <Product key={products._id} product={product} ></Product>) : 
+                      <div className="">
+                         <h2 className="text-4xl pb-8">Sorry!! no product available for this brand</h2>
+                      </div>
+                    
                     }
+                   
+        
                 </div>
-                
             </div>
         </div>
     );

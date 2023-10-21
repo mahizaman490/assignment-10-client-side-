@@ -12,7 +12,7 @@ const Navbar = () => {
       .then(() => Swal.fire("your logout is successfull!"))
       .catch(error => console.error(error))
   }
-
+  
   const navLinks = <>
     <li ><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/addproduct'>Add Product</NavLink></li>

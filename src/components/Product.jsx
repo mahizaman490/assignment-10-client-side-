@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-    const { name, product_img,brand,type,price,description} = product
+    const {_id, name, product_img,brand,type,price,description} = product
     return (
         <div className="">
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
@@ -40,7 +40,7 @@ const Product = ({ product }) => {
                     </p>
                 </div>
                 <div className="p-6 pt-0">
-                    <Link to='/singleProductDetails'>
+                    <Link to={`/singleProductDetails/${_id}`}>
                         <button
                             className="block w-full select-none rounded-lg bg-orange-300 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button"
@@ -48,7 +48,7 @@ const Product = ({ product }) => {
                             Details
                         </button>
                     </Link>
-                    <Link to='/updateproduct'>
+                    <Link to={`/updateproduct/${_id}`}>
                         <button
                             className="block w-full select-none rounded-lg bg-orange-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button"
