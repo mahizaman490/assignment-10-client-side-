@@ -30,7 +30,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <img className="w-10" src="/src/images/logo.png" alt="" />
+        <img className="w-10" src="./images/logo.png" alt="" />
         <a className="btn btn-ghost normal-case text-orange-600 text-xl">Electronics</a>
       </div>
       <div className="navbar-center hidden lg:flex">
