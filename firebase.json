@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "technology-and-electroni-c64c7",
     "public": "dist",
     "ignore": [
       "firebase.json",

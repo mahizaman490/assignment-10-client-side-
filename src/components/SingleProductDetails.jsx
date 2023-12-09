@@ -13,7 +13,7 @@ const SingleProductDetails = () => {
   const { name, brand, description, product_img, price, type, rating } = details
 const handleAddCart = () => {
   const cartProduct = {name, brand, description, product_img, price, type, rating , email:email }
-  fetch('http://localhost:5000/cart',{
+  fetch('https://technology-and-electronics-server-gamma.vercel.app/cart',{
 
     method:"POST",
     headers:{
