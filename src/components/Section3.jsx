@@ -2,8 +2,8 @@
 
 const Section3 = () => {
     return (
-        <div className="w-10/12 mx-auto md:py-20 py-8">
-            <h1 className="text-3xl text-orange-500 font-semibold text-center md:text-6xl mb-8">Some Devices in our brands</h1> 
+        <div className="w-10/12 mx-auto md:py-20 py-24">
+            <h1 className="text-4xl font-bold mb-24 text-orange-600 text-center">Some Devices in our brands</h1> 
             <div className="carousel h-[300px] md:h-[600px]">
   <div id="slide1" className="carousel-item relative w-full ">
     <img src="./images/Home1.jpg" className="w-full" />

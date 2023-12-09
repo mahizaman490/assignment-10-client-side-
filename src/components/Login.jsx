@@ -3,85 +3,101 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
-
 const Login = () => {
-const { signInUser,signInWithGoogle } = useContext(AuthContext);
-const [loginError,setLoginError] = useState('')
+  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate();
 
-const navigate = useNavigate()
+  const handleLogin = e => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-const handleLogin = e => {
-e.preventDefault();
-const email = e.target.email.value;
-const password = e.target.password.value;
-console.log(email,password)
-setLoginError('')
-signInUser(email,password)
-.then(result => {
-  console.log(result.user)
-   
-Swal.fire("you logged in successfully!")
+    setLoginError('');
 
-  e.target.reset()
-  navigate('/')
-})
-.catch(error => {
-console.error(error);
-  setLoginError(error.message)
-})
+    signInUser(email, password)
+      .then(result => {
+        console.log(result.user);
+        Swal.fire("You logged in successfully!");
+        e.target.reset();
+        navigate('/');
+      })
+      .catch(error => {
+        console.error(error);
+        setLoginError(error.message);
+      });
+  }
 
-}
-const handleGoogleSignIn = () =>{
- signInWithGoogle() 
- .then(result =>{
-  console.log(result.user)
-  Swal.fire("you logged in successfully!")
-  navigate('/')
- })
- .catch(error => {
-  console.error(error)
- })
-}
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then(result => {
+        console.log(result.user);
+        Swal.fire("You logged in successfully!");
+        navigate('/');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   return (
-  
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col ">
-          <div className="">
-            <h1 className="text-5xl font-bold text-orange-500">Login now!</h1>
-            <p className="py-6 font-semibold">Connect with our community and our support team to get real-time assistance, tips, and advice from fellow tech enthusiasts.</p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-md shadow-lg w-full max-w-md">
+        <h1 className="text-3xl font-bold text-orange-500 mb-6 text-center">Login Now!</h1>
+        <form onSubmit={handleLogin}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+              required
+            />
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input type="email" placeholder="email" name="email" className="input input-bordered" required />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn bg-orange-400 text-red-600">Login</button>
-              </div>
-            </form>
-            <p className="pb-3 pl-3"><span className="text-red-500 ">new here? </span> <Link to='/register' className="text-red-500 underline">Register</Link></p>
-            <p><button className="btn btn-ghost" onClick={handleGoogleSignIn} >Google</button></p>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+              required
+            />
           </div>
-          {
-          loginError && <p className="text-red-700">{loginError}</p>
-        }
+          <div className="mb-6">
+            <button
+              className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 focus:outline-none focus:shadow-outline"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+        <p className="text-center text-red-500 mb-4">
+          {loginError && <span>{loginError}</span>}
+        </p>
+        <div className="flex items-center justify-between">
+          <p>
+            New here?{" "}
+            <Link to="/register" className="text-orange-500 hover:underline">
+              Register
+            </Link>
+          </p>
+          <p>
+            <button
+              className="btn btn-ghost"
+              onClick={handleGoogleSignIn}
+            >
+              Login with Google
+            </button>
+          </p>
         </div>
-       
       </div>
-     
-
+    </div>
   );
 };
 

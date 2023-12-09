@@ -3,101 +3,101 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const [registerError, setRegisterError] = useState('');
+  const [registerSuccess, setRegisterSuccess] = useState('');
+  const navigate = useNavigate();
 
-
-  const { createUser } = useContext(AuthContext)
-  const [registerError, SetRegisterError] = useState('');
-  const [registerSuccess, setregisterSuccess] = useState('');
-  const navigate = useNavigate()
-  const handleRegister = e => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, email, password)
-    SetRegisterError('')
-    setregisterSuccess('')
 
-    if (password.length < 6) {
-      SetRegisterError('password should be at least 6 characters or longer')
-      return;
-    } else if (!/[A-Z]/.test(password)) {
-      SetRegisterError('Your password should have at least one upper case characters');
-      return;
-    } else if (!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)) {
-      SetRegisterError('Your password should have a special characters');
-      return;
+    setRegisterError('');
+    setRegisterSuccess('');
+
+    try {
+      if (password.length < 6) {
+        throw new Error('Password should be at least 6 characters or longer');
+      } else if (!/[A-Z]/.test(password)) {
+        throw new Error('Your password should have at least one uppercase character');
+      } else if (!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)) {
+        throw new Error('Your password should have a special character');
+      }
+
+      const result = await createUser(email, password);
+
+      console.log(result.user);
+      setRegisterSuccess('Registration successful! Please log in.');
+      e.target.reset();
+      navigate('/login');
+    } catch (error) {
+      console.error(error);
+      setRegisterError(error.message);
     }
-    createUser(email, password)
-      .then(result => {
-        console.log(result.user)
-
-        e.target.reset()
-        navigate('/')
-        
-
-      })
-      .catch(error => {
-        console.error(error);
-        SetRegisterError(error.message)
-      })
-
-
-  }
-
+  };
 
   return (
-
-  <>
-  
-  <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col ">
-          <div className="">
-            <h1 className="text-5xl font-bold text-orange-500">Register now!</h1>
-            <p className="py-6 font-semibold">Connect with our community and our support team to get real-time assistance, tips, and advice from fellow tech enthusiasts.</p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-md shadow-lg w-full max-w-md">
+        <h1 className="text-3xl font-bold text-orange-500 mb-6 text-center">Register Now!</h1>
+        <form onSubmit={handleRegister}>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+              required
+            />
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input type="text" placeholder="name" name="name" className="input input-bordered" required />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn bg-orange-400 text-red-600">Register</button>
-              </div>
-            </form>
-            <p className="pb-3 pl-3"><span className="text-red-500 ">Alredy have account? </span> <Link to='/login ' className="text-red-500 underline">Login</Link></p>
+          <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+              required
+            />
           </div>
-          {
-          registerError && <p className="text-red-700">{registerError}</p>
-        }
-        {
-          registerSuccess && <p>{registerSuccess}</p>
-        }
+          <div className="mb-6">
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:border-orange-500"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <button
+              className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 focus:outline-none focus:shadow-outline"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+        <p className="text-center text-red-500 mb-4">{registerError}</p>
+        <div className="flex items-center justify-center">
+          <p>
+            Already have an account?{" "}
+            <Link to="/login" className="text-orange-500 hover:underline">
+              Login
+            </Link>
+          </p>
         </div>
-    
-  
       </div>
-        
-  </>
-
+    </div>
   );
 };
 

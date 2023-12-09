@@ -1,7 +1,7 @@
 const Section4 = () => {
     return (
         <div className="w-10/12 mx-auto md:py-20 py-8">
-            <h1 className="text-3xl text-orange-500 font-semibold text-center md:text-6xl mb-8">About US</h1> 
+            <h1 className="text-4xl font-bold mb-24 text-orange-600 text-center">About US</h1> 
             <div className="collapse collapse-arrow bg-orange-100 my-4">
   <input type="radio" name="my-accordion-2" checked="checked" /> 
   <div className="collapse-title text-xl font-medium">

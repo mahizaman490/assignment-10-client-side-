@@ -1,4 +1,3 @@
-
 import { FaSearch } from 'react-icons/fa';
 
 const Banner = () => {
@@ -18,11 +17,13 @@ const Banner = () => {
                 placeholder="Search..."
                 className="px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:border-orange-300 text-black"
               />
-              <button className="btn bg-orange-300 text-slate-600 rounded-r-md">
+              <button className="btn bg-orange-400 text-white rounded-r-md hover:bg-orange-500">
                 <FaSearch />
               </button>
             </div>
-            <button className="btn bg-orange-300 text-slate-600">Get Started</button>
+            <button className="btn bg-orange-400 text-white hover:bg-orange-500">
+              Get Started
+            </button>
           </div>
         </div>
       </div>
