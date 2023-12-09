@@ -14,7 +14,7 @@ const AddProduct = () => {
 
         const newProduct = { name, brand, description, product_img, price, type, rating }
         console.log(newProduct)
-        fetch('https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/product', {
+        fetch('http://localhost:5000/product', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -119,4 +119,5 @@ const AddProduct = () => {
     );
 };
 
+//https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app
 export default AddProduct;

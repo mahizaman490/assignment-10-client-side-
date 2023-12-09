@@ -13,7 +13,7 @@ const MyCart = () => {
     
 console.log(MyCartData)
     useEffect(()=>{
-        fetch(`https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/cartData/${email}`)
+        fetch(`http://localhost:5000/cartData/${email}`)
         .then(res => res.json())
         .then(data =>{console.log(data), 
         setMyCartData(data)
@@ -32,7 +32,7 @@ console.log(MyCartData)
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/cartData/${_id}`,
+                fetch(`http://localhost:5000/cartData/${_id}`,
                 {method: "DELETE"}
                 )
                 .then(res => res.json())

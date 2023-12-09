@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path:'/updateproduct/:id',
         element:<PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-        loader:({params})=>fetch(`https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/products/${params.id}`) 
+        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`) 
       },
       {
         path:'/mycart',
@@ -65,12 +65,12 @@ const router = createBrowserRouter([
       {
         path:'/:brand',
         element:<SingleBrandPage></SingleBrandPage>,
-        loader:({params})=>fetch(`https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/product/${params.brand}`) 
+        loader:({params})=>fetch(`http://localhost:5000/product/${params.brand}`) 
       },
       {
         path:'/singleProductDetails/:id',
         element:<PrivateRoutes><SingleProductDetails></SingleProductDetails></PrivateRoutes>,
-        loader:({params})=>fetch(`https://technology-and-electronics-server-cpm8qpz8p-mahizaman490.vercel.app/products/${params.id}`) 
+        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`) 
        
       }
     ]
