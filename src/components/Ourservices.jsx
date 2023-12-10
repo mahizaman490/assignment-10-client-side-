@@ -17,7 +17,9 @@ const Ourservices = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Service Card 1 */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <h3 className="text-xl font-semibold mb-4">Electronic Product Design</h3>
             <p className="text-gray-600">
               We specialize in creating innovative and user-friendly electronic products from concept to production.
@@ -25,7 +27,9 @@ const Ourservices = () => {
           </div>
 
           {/* Service Card 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <h3 className="text-xl font-semibold mb-4">Technology Consulting</h3>
             <p className="text-gray-600">
               Our expert consultants provide technology guidance and solutions to help your business thrive in the digital age.
@@ -33,7 +37,9 @@ const Ourservices = () => {
           </div>
 
           {/* Service Card 3 */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <h3 className="text-xl font-semibold mb-4">Electronics Repair Services</h3>
             <p className="text-gray-600">
               Trust our skilled technicians to handle the repair and maintenance of your electronic devices and gadgets.

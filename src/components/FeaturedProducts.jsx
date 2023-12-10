@@ -33,7 +33,9 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg focus:shadow-lg transition duration-300 ease-in-out"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg focus:shadow-lg transition duration-300 ease-in-out" data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
             >
               <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
               <p className="text-gray-600 mb-4">{product.description}</p>

@@ -1,6 +1,8 @@
 const Section4 = () => {
     return (
-        <div className="w-10/12 mx-auto md:py-20 py-8">
+        <div className="w-10/12 mx-auto md:py-20 py-8" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <h1 className="text-4xl font-bold mb-24 text-orange-600 text-center">About US</h1> 
             <div className="collapse collapse-arrow bg-orange-100 my-4">
   <input type="radio" name="my-accordion-2" checked="checked" /> 

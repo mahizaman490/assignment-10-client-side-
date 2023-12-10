@@ -25,7 +25,9 @@ const ProductShowcase = () => {
     <div className="py-16 bg-gray-100 my-32">
       <div className="container mx-auto">
       
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           {products.map((product) => (
             <div key={product.id} className="w-full md:w-1/2 lg:w-1/2 p-4">
               <div className="flex flex-col md:flex-row items-center">

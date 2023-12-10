@@ -15,18 +15,21 @@ const Navbar = () => {
 
   const iconSize = 16; // Set the desired size for the icons
 
+  const navLinkClass = "text-orange-500"; // Use your preferred class for orange text color
+  const iconClass = "text-orange-500"; // Use your preferred class for orange icon color
+
   const navLinks = (
     <>
-      <li><NavLink to='/'>Home</NavLink></li>
-      <li><NavLink to='/addproduct'>Add Product</NavLink></li>
-      <li><NavLink to='/mycart'><FaShoppingCart size={iconSize} /> My Cart</NavLink></li>
-      <li><NavLink to='/login'><FaUser size={iconSize} /> Login</NavLink></li>
-      <li><NavLink to='/'><FaBell size={iconSize} /></NavLink></li>
+      <li><NavLink to='/' className={navLinkClass}>Home</NavLink></li>
+      <li><NavLink to='/addproduct' className={navLinkClass}>Add Product</NavLink></li>
+      <li><NavLink to='/mycart' className={navLinkClass}><FaShoppingCart size={iconSize} className={iconClass} /> My Cart</NavLink></li>
+      <li><NavLink to='/login' className={navLinkClass}><FaUser size={iconSize} className={iconClass} /> Login</NavLink></li>
+      <li><NavLink to='/' className={navLinkClass}><FaBell size={iconSize} className={iconClass} /></NavLink></li>
     </>
   );
 
   return (
-    <div className="navbar bg-orange-200">
+    <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost">

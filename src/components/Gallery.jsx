@@ -16,7 +16,9 @@ const Gallery = () => {
       <div className="container mx-auto text-center">
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           {galleryImages.map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out">
               <img
