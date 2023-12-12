@@ -1,3 +1,4 @@
+import GetOffer from "./GetOffer";
 
 
 const FeaturedProducts = () => {
@@ -27,7 +28,10 @@ const FeaturedProducts = () => {
   
   <div className="py-16 bg-gray-200 my-20">
       <div className="container mx-auto text-center">
-        
+      <h2 className="text-2xl text-center font-bold mb-8 text-orange-600 ">
+          Get offer
+        </h2>
+        <GetOffer></GetOffer>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
